@@ -1,0 +1,1069 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="TechJobHub Admin - Add and manage IT job listings."
+    >
+
+    <title>
+        Admin - TechJobHub
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================
+         NAVBAR
+    ====================================== -->
+
+    <header class="navbar">
+
+        <div class="container nav-container">
+
+            <a
+                href="index.html"
+                class="logo"
+            >
+                <span>Tech</span>JobHub
+            </a>
+
+
+            <nav class="nav-menu">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="jobs.html">
+                    Jobs
+                </a>
+
+                <a
+                    href="admin.html"
+                    class="active"
+                >
+                    Admin
+                </a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =====================================
+         ADMIN PAGE
+    ====================================== -->
+
+    <main>
+
+        <section class="admin-page">
+
+            <div class="container">
+<!-- =====================================
+     ADMIN LOGIN
+====================================== -->
+
+<div
+    id="admin-login"
+    class="admin-login"
+    style="display: none;"
+>
+
+    <div class="admin-login-box">
+
+        <span class="section-label">
+            ADMIN ACCESS
+        </span>
+
+        <h1>
+            TechJobHub Admin
+        </h1>
+
+        <p>
+            Login to manage TechJobHub job listings.
+        </p>
+
+
+        <form id="admin-login-form">
+
+            <div class="form-group">
+
+                <label for="admin-username">
+                    Username
+                </label>
+
+                <input
+                    type="text"
+                    id="admin-username"
+                    placeholder="Enter admin username"
+                    autocomplete="username"
+                    required
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="admin-password">
+                    Password
+                </label>
+
+                <input
+                    type="password"
+                    id="admin-password"
+                    placeholder="Enter admin password"
+                    autocomplete="current-password"
+                    required
+                >
+
+            </div>
+
+
+            <button
+                type="submit"
+                class="search-jobs-button"
+            >
+                Login to Admin
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+ <!-- =====================================
+     ADMIN DASHBOARD
+====================================== -->
+
+<div
+    id="admin-dashboard"
+    class="admin-dashboard"
+    style="display: none;"
+>
+    <div class="admin-dashboard-header">
+
+    <div>
+
+        <span class="section-label">
+            DASHBOARD
+        </span>
+
+        <h2>
+            Job Overview
+        </h2>
+
+        <p>
+            Monitor your TechJobHub job listings.
+        </p>
+
+    </div>
+
+
+    <button
+        type="button"
+        id="admin-logout"
+        class="secondary-button"
+    >
+        Logout
+    </button>
+
+</div>
+
+
+
+    <div class="admin-stats-grid">
+
+
+        <!-- TOTAL JOBS -->
+
+        <div class="admin-stat-card">
+
+            <div class="admin-stat-icon">
+                💼
+            </div>
+
+            <div>
+
+                <span>
+                    Total Jobs
+                </span>
+
+                <strong id="admin-job-count">
+                    0
+                </strong>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- FRESHER JOBS -->
+
+        <div class="admin-stat-card">
+
+            <div class="admin-stat-icon">
+                🎓
+            </div>
+
+            <div>
+
+                <span>
+                    Fresher Jobs
+                </span>
+
+                <strong id="admin-fresher-jobs">
+                    0
+                </strong>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- INTERNSHIPS -->
+
+        <div class="admin-stat-card">
+
+            <div class="admin-stat-icon">
+                🚀
+            </div>
+
+            <div>
+
+                <span>
+                    Internships
+                </span>
+
+                <strong id="admin-internship-jobs">
+                    0
+                </strong>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- CYBERSECURITY -->
+
+        <div class="admin-stat-card">
+
+            <div class="admin-stat-icon">
+                🛡️
+            </div>
+
+            <div>
+
+                <span>
+                    Cybersecurity
+                </span>
+
+                <strong id="admin-cybersecurity-jobs">
+                    0
+                </strong>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</div>
+
+
+                <!-- HEADER -->
+
+                <div class="admin-header">
+
+                    <span class="section-label">
+                        JOB MANAGEMENT
+                    </span>
+
+
+                    <h1>
+                        Add New Job
+                    </h1>
+
+
+                    <p>
+                        Create a new IT job listing for TechJobHub.
+                    </p>
+
+                </div>
+
+
+
+                <!-- FORM -->
+
+                <form
+                    id="job-form"
+                    class="admin-form"
+                >
+
+
+                    <!-- BASIC INFORMATION -->
+
+                    <div class="admin-form-section">
+
+                        <h2>
+                            Basic Information
+                        </h2>
+
+
+                        <div class="admin-form-grid">
+
+
+                            <div class="form-group">
+
+                                <label for="job-title">
+                                    Job Title *
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="job-title"
+                                    placeholder="e.g. SOC Analyst"
+                                    required
+                                >
+
+                            </div>
+
+
+
+                            <div class="form-group">
+
+                                <label for="company-name">
+                                    Company *
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="company-name"
+                                    placeholder="e.g. Microsoft"
+                                    required
+                                >
+
+                            </div>
+
+
+
+                            <div class="form-group">
+
+                                <label for="job-location">
+                                    Location *
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="job-location"
+                                    placeholder="e.g. Pune"
+                                    required
+                                >
+
+                            </div>
+
+
+
+                            <div class="form-group">
+
+                                <label for="job-experience">
+                                    Experience *
+                                </label>
+
+                                <select
+                                    id="job-experience"
+                                    required
+                                >
+
+                                    <option value="">
+                                        Select Experience
+                                    </option>
+
+                                    <option value="Fresher">
+                                        Fresher
+                                    </option>
+
+                                    <option value="0-1">
+                                        0–1 Year
+                                    </option>
+
+                                    <option value="1-3">
+                                        1–3 Years
+                                    </option>
+
+                                    <option value="3-5">
+                                        3–5 Years
+                                    </option>
+
+                                    <option value="5+">
+                                        5+ Years
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+
+                            <div class="form-group">
+
+                                <label for="work-mode">
+                                    Work Mode *
+                                </label>
+
+                                <select
+                                    id="work-mode"
+                                    required
+                                >
+
+                                    <option value="">
+                                        Select Work Mode
+                                    </option>
+
+                                    <option value="On-site">
+                                        On-site
+                                    </option>
+
+                                    <option value="Hybrid">
+                                        Hybrid
+                                    </option>
+
+                                    <option value="Remote">
+                                        Remote
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+
+                            <div class="form-group">
+
+                                <label for="job-type">
+                                    Job Type *
+                                </label>
+
+                                <select
+                                    id="job-type"
+                                    required
+                                >
+
+                                    <option value="">
+                                        Select Job Type
+                                    </option>
+
+                                    <option value="Full-time">
+                                        Full-time
+                                    </option>
+
+                                    <option value="Part-time">
+                                        Part-time
+                                    </option>
+
+                                    <option value="Internship">
+                                        Internship
+                                    </option>
+
+                                    <option value="Contract">
+                                        Contract
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+
+                            <div class="form-group">
+
+                                <label for="job-category">
+                                    Category *
+                                </label>
+
+                                <select
+                                    id="job-category"
+                                    required
+                                >
+
+                                    <option value="">
+                                        Select Category
+                                    </option>
+
+                                    <option value="software-development">
+                                        Software Development
+                                    </option>
+
+                                    <option value="cybersecurity">
+                                        Cybersecurity
+                                    </option>
+
+                                    <option value="data-analytics">
+                                        Data & Analytics
+                                    </option>
+
+                                    <option value="cloud-devops">
+                                        Cloud & DevOps
+                                    </option>
+
+                                    <option value="ai-ml">
+                                        AI & Machine Learning
+                                    </option>
+
+                                    <option value="testing-qa">
+                                        Testing & QA
+                                    </option>
+
+                                    <option value="fresher">
+                                        Fresher Jobs
+                                    </option>
+
+                                    <option value="internships">
+                                        Internships
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+
+                            <div class="form-group">
+
+                                <label for="job-badge">
+                                    Badge
+                                </label>
+
+                                <select id="job-badge">
+
+                                    <option value="New">
+                                        New
+                                    </option>
+
+                                    <option value="Today">
+                                        Today
+                                    </option>
+
+                                    <option value="Featured">
+                                        Featured
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- SKILLS -->
+
+                    <div class="admin-form-section">
+
+                        <h2>
+                            Skills
+                        </h2>
+
+
+                        <div class="form-group">
+
+                            <label for="job-skills">
+                                Skills *
+                            </label>
+
+
+                            <input
+                                type="text"
+                                id="job-skills"
+                                placeholder="Python, SIEM, Linux, AWS"
+                                required
+                            >
+
+
+                            <small>
+                                Separate multiple skills with commas.
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- DESCRIPTION -->
+
+                    <div class="admin-form-section">
+
+                        <h2>
+                            Job Description
+                        </h2>
+
+
+                        <div class="form-group">
+
+                            <label for="job-description">
+                                Description *
+                            </label>
+
+
+                            <textarea
+                                id="job-description"
+                                rows="6"
+                                placeholder="Write the complete job description..."
+                                required
+                            ></textarea>
+
+                        </div>
+
+                    </div>
+
+<!-- =====================================
+     MANAGE JOBS
+====================================== -->
+
+<section class="manage-jobs-section">
+
+
+    <div class="manage-jobs-header">
+
+        <div>
+
+            <span class="section-label">
+                JOB MANAGEMENT
+            </span>
+
+            <h2>
+                Manage Jobs
+            </h2>
+
+            <p>
+                View and manage all published job listings.
+            </p>
+
+        </div>
+
+
+        <span
+            id="manage-job-count"
+            class="job-count"
+        >
+            0 Jobs
+        </span>
+
+    </div>
+
+
+
+    <!-- JOB SEARCH -->
+
+    <div class="manage-jobs-search">
+
+        <input
+            type="text"
+            id="admin-job-search"
+            placeholder="Search jobs by title, company or location..."
+        >
+
+    </div>
+
+
+
+    <!-- JOB TABLE -->
+
+    <div class="admin-jobs-table-wrapper">
+
+        <table class="admin-jobs-table">
+
+            <thead>
+
+                <tr>
+
+                    <th>
+                        Job
+                    </th>
+
+                    <th>
+                        Company
+                    </th>
+
+                    <th>
+                        Location
+                    </th>
+
+                    <th>
+                        Category
+                    </th>
+
+                    <th>
+                        Type
+                    </th>
+
+                    <th>
+                        Actions
+                    </th>
+
+                </tr>
+
+            </thead>
+
+
+            <tbody id="admin-jobs-table-body">
+
+                <!-- Jobs will be inserted by JavaScript -->
+
+            </tbody>
+
+        </table>
+
+
+        <div
+            id="admin-no-jobs"
+            class="admin-no-jobs"
+            style="display: none;"
+        >
+
+            <div>
+                📋
+            </div>
+
+            <h3>
+                No jobs found
+            </h3>
+
+            <p>
+                Create your first job listing above.
+            </p>
+
+        </div>
+
+    </div>
+
+
+</section>
+
+
+
+                    <!-- RESPONSIBILITIES -->
+
+                    <div class="admin-form-section">
+
+                        <h2>
+                            Responsibilities
+                        </h2>
+
+
+                        <div class="form-group">
+
+                            <label for="job-responsibilities">
+                                Responsibilities *
+                            </label>
+
+
+                            <textarea
+                                id="job-responsibilities"
+                                rows="7"
+                                placeholder="Monitor security alerts.
+Investigate suspicious activity.
+Analyze SIEM logs."
+                                required
+                            ></textarea>
+
+
+                            <small>
+                                Write one responsibility per line.
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- REQUIREMENTS -->
+
+                    <div class="admin-form-section">
+
+                        <h2>
+                            Requirements
+                        </h2>
+
+
+                        <div class="form-group">
+
+                            <label for="job-requirements">
+                                Requirements *
+                            </label>
+
+
+                            <textarea
+                                id="job-requirements"
+                                rows="7"
+                                placeholder="Basic networking knowledge.
+Understanding of SIEM.
+Good analytical skills."
+                                required
+                            ></textarea>
+
+
+                            <small>
+                                Write one requirement per line.
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- APPLICATION -->
+
+                    <div class="admin-form-section">
+
+                        <h2>
+                            Application
+                        </h2>
+
+
+                        <div class="form-group">
+
+                            <label for="apply-link">
+                                Application URL *
+                            </label>
+
+
+                            <input
+                                type="url"
+                                id="apply-link"
+                                placeholder="https://company.com/careers/job..."
+                                required
+                            >
+
+
+                            <small>
+                                Use the verified employer application URL.
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- FORM ACTIONS -->
+
+                    <div class="admin-form-actions">
+
+
+                        <button
+                            type="reset"
+                            class="secondary-button"
+                        >
+                            Clear Form
+                        </button>
+
+
+                        <button
+                            type="submit"
+                            class="search-jobs-button"
+                        >
+                            Create Job
+                        </button>
+
+
+                    </div>
+
+
+                </form>
+
+
+
+                <!-- SUCCESS MESSAGE -->
+
+                <div
+                    id="admin-success"
+                    class="admin-success"
+                    style="display: none;"
+                >
+
+                    <strong>
+                        Job created successfully.
+                    </strong>
+
+                    <span>
+                        The job data has been prepared for publishing.
+                    </span>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =====================================
+         FOOTER
+    ====================================== -->
+
+    <footer class="footer">
+
+        <div class="container footer-grid">
+
+
+            <div class="footer-about">
+
+                <a
+                    href="index.html"
+                    class="logo"
+                >
+                    <span>Tech</span>JobHub
+                </a>
+
+
+                <p>
+                    India-focused IT jobs, internships and
+                    career opportunities.
+                </p>
+
+            </div>
+
+
+
+            <div class="footer-column">
+
+                <h4>
+                    Jobs
+                </h4>
+
+
+                <a href="jobs.html">
+                    Latest Jobs
+                </a>
+
+
+                <a href="jobs.html?category=fresher">
+                    Fresher Jobs
+                </a>
+
+
+                <a href="jobs.html?category=internships">
+                    Internships
+                </a>
+
+            </div>
+
+
+
+            <div class="footer-column">
+
+                <h4>
+                    Resources
+                </h4>
+
+
+                <a href="index.html#career">
+                    Resume Guides
+                </a>
+
+
+                <a href="index.html#career">
+                    Interview Prep
+                </a>
+
+
+                <a href="index.html#career">
+                    Career Guides
+                </a>
+
+            </div>
+
+
+
+            <div class="footer-column">
+
+                <h4>
+                    Company
+                </h4>
+
+
+                <a href="#">
+                    About Us
+                </a>
+
+
+                <a href="#">
+                    Contact
+                </a>
+
+
+                <a href="#">
+                    Privacy Policy
+                </a>
+
+
+                <a href="#">
+                    Disclaimer
+                </a>
+
+            </div>
+
+
+        </div>
+
+
+
+        <div class="container footer-bottom">
+
+            <p>
+                © 2026 TechJobHub. All rights reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- =====================================
+         JAVASCRIPT
+    ====================================== -->
+
+    <script src="script.js"></script>
+
+    <script src="admin-api.js"></script>
+
+</body>
+
+</html>

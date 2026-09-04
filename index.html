@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="TechJobHub - Find the latest IT jobs, fresher jobs, internships and off-campus opportunities in India."
+    >
+
+    <meta
+        name="keywords"
+        content="IT jobs India, fresher jobs, internships, software jobs, cybersecurity jobs, off campus jobs"
+    >
+
+    <meta
+        name="author"
+        content="TechJobHub"
+    >
+
+    <title>
+        TechJobHub - IT Jobs & Career Opportunities
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================
+         NAVBAR
+    ====================================== -->
+
+    <header class="navbar">
+
+        <div class="container nav-container">
+
+
+            <!-- LOGO -->
+
+            <a
+                href="index.html"
+                class="logo"
+            >
+                <span>Tech</span>JobHub
+            </a>
+
+
+            <!-- MOBILE MENU BUTTON -->
+
+            <button
+                class="menu-toggle"
+                id="menu-toggle"
+                aria-label="Open navigation menu"
+                type="button"
+            >
+                ☰
+            </button>
+
+
+            <!-- NAVIGATION -->
+
+            <nav class="nav-menu">
+
+                <a
+                    href="index.html"
+                    class="active"
+                >
+                    Home
+                </a>
+
+                <a href="jobs.html">
+                    Latest Jobs
+                </a>
+
+                <a href="#categories">
+                    Categories
+                </a>
+
+                <a href="jobs.html?category=internships">
+                    Internships
+                </a>
+
+                <a href="#career">
+                    Career
+                </a>
+
+                <a
+                    href="#telegram"
+                    class="telegram-link"
+                >
+                    Join Telegram
+                </a>
+
+            </nav>
+
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =====================================
+         MAIN CONTENT
+    ====================================== -->
+
+    <main>
+
+
+        <!-- =================================
+             HERO SECTION
+        ================================== -->
+
+        <section class="hero">
+
+            <div class="container hero-content">
+
+
+                <span class="hero-label">
+                    INDIA'S IT JOB PLATFORM
+                </span>
+
+
+                <h1>
+                    Find Your Next
+                    <span>IT Opportunity</span>
+                </h1>
+
+
+                <p>
+                    Discover the latest IT jobs, fresher opportunities,
+                    internships and remote roles from companies across India.
+                </p>
+
+
+                <!-- HERO SEARCH -->
+
+                <div class="hero-search">
+
+
+                    <div class="hero-search-field">
+
+                        <span>⌕</span>
+
+                        <input
+                            type="text"
+                            id="hero-job-search"
+                            placeholder="Job title, skill or company"
+                        >
+
+                    </div>
+
+
+                    <div class="hero-search-field location-field">
+
+                        <span>⌖</span>
+
+                        <input
+                            type="text"
+                            id="hero-location-search"
+                            placeholder="Location"
+                        >
+
+                    </div>
+
+
+                    <button
+                        type="button"
+                        id="hero-search-button"
+                    >
+                        Search Jobs →
+                    </button>
+
+
+                </div>
+
+
+                <!-- POPULAR SEARCHES -->
+
+                <div class="popular-searches">
+
+                    <span>
+                        Popular:
+                    </span>
+
+
+                    <a
+                        href="jobs.html?category=software-development"
+                    >
+                        Software Development
+                    </a>
+
+
+                    <a
+                        href="jobs.html?category=cybersecurity"
+                    >
+                        Cybersecurity
+                    </a>
+
+
+                    <a
+                        href="jobs.html?category=data-analytics"
+                    >
+                        Data
+                    </a>
+
+
+                    <a
+                        href="jobs.html?category=cloud-devops"
+                    >
+                        Cloud & DevOps
+                    </a>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================
+             LATEST JOBS
+        ================================== -->
+
+        <section
+            class="latest-jobs"
+            id="latest-jobs"
+        >
+
+            <div class="container">
+
+
+                <div class="section-heading">
+
+
+                    <div>
+
+                        <span class="section-label">
+                            FRESH OPPORTUNITIES
+                        </span>
+
+
+                        <h2>
+                            Latest IT Jobs
+                        </h2>
+
+
+                        <p>
+                            Explore the latest IT jobs, fresher
+                            opportunities and internships.
+                        </p>
+
+                    </div>
+
+
+                    <a
+                        href="jobs.html"
+                        class="view-all-link"
+                    >
+                        View All Jobs →
+                    </a>
+
+
+                </div>
+
+
+                <!--
+                    JavaScript will automatically
+                    load latest jobs here.
+                -->
+
+                <div
+                    class="homepage-job-list"
+                    id="homepage-job-list"
+                >
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================
+             CATEGORIES
+        ================================== -->
+
+        <section
+            class="categories"
+            id="categories"
+        >
+
+            <div class="container">
+
+
+                <div class="section-heading">
+
+
+                    <div>
+
+                        <span class="section-label">
+                            EXPLORE OPPORTUNITIES
+                        </span>
+
+
+                        <h2>
+                            Browse by Category
+                        </h2>
+
+
+                        <p>
+                            Find jobs based on your skills
+                            and career interests.
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+
+                <!--
+                    Categories are generated
+                    dynamically using JavaScript.
+                -->
+
+                <div
+                    class="category-grid"
+                    id="category-grid"
+                >
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================
+             TELEGRAM CTA
+        ================================== -->
+
+        <section
+            class="telegram-section"
+            id="telegram"
+        >
+
+            <div class="container telegram-container">
+
+
+                <div>
+
+                    <p class="section-label">
+                        NEVER MISS AN OPPORTUNITY
+                    </p>
+
+
+                    <h2>
+                        Get Daily IT Job Alerts on Telegram
+                    </h2>
+
+
+                    <p>
+                        New jobs, fresher openings, internships and
+                        off-campus drives delivered directly to your phone.
+                    </p>
+
+                </div>
+
+
+                <!--
+                    Replace # with your actual
+                    Telegram channel URL later.
+                -->
+
+                <a
+                    href="#"
+                    class="telegram-button"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    ✈ Join Telegram Channel
+                </a>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================
+             CAREER RESOURCES
+        ================================== -->
+
+        <section
+            class="career section"
+            id="career"
+        >
+
+            <div class="container">
+
+
+                <!-- HEADING -->
+
+                <div class="section-heading">
+
+
+                    <div>
+
+                        <p class="section-label">
+                            CAREER RESOURCES
+                        </p>
+
+
+                        <h2>
+                            More Than Just Job Listings
+                        </h2>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- RESOURCE GRID -->
+
+                <div class="resource-grid">
+
+
+                    <!-- RESUME -->
+
+                    <a
+                        href="#"
+                        class="resource-card"
+                    >
+
+                        <div class="resource-icon">
+                            📄
+                        </div>
+
+
+                        <div>
+
+                            <h3>
+                                Resume Guides
+                            </h3>
+
+
+                            <p>
+                                Build an ATS-friendly resume for IT jobs.
+                            </p>
+
+                        </div>
+
+
+                        <span>
+                            →
+                        </span>
+
+
+                    </a>
+
+
+
+                    <!-- INTERVIEW -->
+
+                    <a
+                        href="#"
+                        class="resource-card"
+                    >
+
+                        <div class="resource-icon">
+                            🎯
+                        </div>
+
+
+                        <div>
+
+                            <h3>
+                                Interview Preparation
+                            </h3>
+
+
+                            <p>
+                                Prepare for technical and HR interviews.
+                            </p>
+
+                        </div>
+
+
+                        <span>
+                            →
+                        </span>
+
+
+                    </a>
+
+
+
+                    <!-- CAREER -->
+
+                    <a
+                        href="#"
+                        class="resource-card"
+                    >
+
+                        <div class="resource-icon">
+                            🧭
+                        </div>
+
+
+                        <div>
+
+                            <h3>
+                                Career Guides
+                            </h3>
+
+
+                            <p>
+                                Practical roadmaps for starting a tech career.
+                            </p>
+
+                        </div>
+
+
+                        <span>
+                            →
+                        </span>
+
+
+                    </a>
+
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =====================================
+         FOOTER
+    ====================================== -->
+
+    <footer class="footer">
+
+
+        <div class="container footer-grid">
+
+
+            <!-- ABOUT -->
+
+            <div class="footer-about">
+
+
+                <a
+                    href="index.html"
+                    class="logo"
+                >
+                    <span>
+                        Tech
+                    </span>JobHub
+                </a>
+
+
+                <p>
+                    India-focused IT jobs, internships and career
+                    opportunities.
+                </p>
+
+
+            </div>
+
+
+
+            <!-- JOBS -->
+
+            <div class="footer-column">
+
+
+                <h4>
+                    Jobs
+                </h4>
+
+
+                <a href="jobs.html">
+                    Latest Jobs
+                </a>
+
+
+                <a href="#categories">
+                    Categories
+                </a>
+
+
+                <a href="jobs.html?category=fresher">
+                    Fresher Jobs
+                </a>
+
+
+                <a href="jobs.html?category=internships">
+                    Internships
+                </a>
+
+
+            </div>
+
+
+
+            <!-- RESOURCES -->
+
+            <div class="footer-column">
+
+
+                <h4>
+                    Resources
+                </h4>
+
+
+                <a href="#career">
+                    Resume Guides
+                </a>
+
+
+                <a href="#career">
+                    Interview Prep
+                </a>
+
+
+                <a href="#career">
+                    Career Guides
+                </a>
+
+
+            </div>
+
+
+
+            <!-- COMPANY -->
+
+            <div class="footer-column">
+
+
+                <h4>
+                    Company
+                </h4>
+
+
+                <a href="#">
+                    About Us
+                </a>
+
+
+                <a href="#">
+                    Contact
+                </a>
+
+
+                <a href="#">
+                    Privacy Policy
+                </a>
+
+
+                <a href="#">
+                    Disclaimer
+                </a>
+
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- COPYRIGHT -->
+
+        <div class="container footer-bottom">
+
+
+            <p>
+                © 2026 TechJobHub. All rights reserved.
+            </p>
+
+
+        </div>
+
+
+    </footer>
+
+
+
+    <!-- =====================================
+         JAVASCRIPT
+    ====================================== -->
+
+    
+
+    <script src="script.js"></script>
+
+    <script src="home-api.js"></script>
+
+    <script src="api.js"></script>
+
+
+</body>
+
+</html>

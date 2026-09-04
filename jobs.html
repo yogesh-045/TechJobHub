@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Browse the latest IT jobs, fresher jobs, internships and career opportunities on TechJobHub."
+    >
+
+    <meta
+        name="keywords"
+        content="IT jobs India, fresher jobs, internships, software jobs, cybersecurity jobs, remote jobs"
+    >
+
+    <meta
+        name="author"
+        content="TechJobHub"
+    >
+
+    <title>
+        Latest IT Jobs - TechJobHub
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================
+         NAVBAR
+    ====================================== -->
+
+    <header class="navbar">
+
+        <div class="container nav-container">
+
+
+            <a
+                href="index.html"
+                class="logo"
+            >
+                <span>Tech</span>JobHub
+            </a>
+
+
+            <button
+                class="menu-toggle"
+                id="menu-toggle"
+                type="button"
+                aria-label="Open navigation menu"
+            >
+                ☰
+            </button>
+
+
+            <nav class="nav-menu">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+
+                <a
+                    href="jobs.html"
+                    class="active"
+                >
+                    Latest Jobs
+                </a>
+
+
+                <a href="index.html#categories">
+                    Categories
+                </a>
+
+
+                <a href="jobs.html?category=internships">
+                    Internships
+                </a>
+
+
+                <a href="index.html#career">
+                    Career
+                </a>
+
+
+                <a
+                    href="index.html#telegram"
+                    class="telegram-link"
+                >
+                    Join Telegram
+                </a>
+
+            </nav>
+
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =====================================
+         PAGE HEADER
+    ====================================== -->
+
+    <section class="jobs-page-header">
+
+        <div class="container">
+
+
+            <div class="breadcrumb">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <span>/</span>
+
+                <span id="breadcrumb-current">
+                    Latest Jobs
+                </span>
+
+            </div>
+
+
+            <span class="section-label">
+                FRESH OPPORTUNITIES
+            </span>
+
+
+            <h1 id="jobs-page-title">
+                Latest IT Jobs
+            </h1>
+
+
+            <p id="jobs-page-description">
+                Discover the latest IT jobs, fresher opportunities,
+                internships and career openings in India.
+            </p>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================
+         JOB SEARCH & FILTERS
+    ====================================== -->
+
+    <section class="jobs-page-content">
+
+        <div class="container">
+
+
+            <div class="jobs-search-box">
+
+
+                <!-- SEARCH -->
+
+                <div class="search-field">
+
+                    <label for="all-job-search">
+                        Search
+                    </label>
+
+
+                    <input
+                        type="text"
+                        id="all-job-search"
+                        placeholder="Job title, skill or company..."
+                    >
+
+                </div>
+
+
+
+                <!-- LOCATION -->
+
+                <div class="search-field">
+
+                    <label for="all-location-filter">
+                        Location
+                    </label>
+
+
+                    <select id="all-location-filter">
+
+                        <option value="">
+                            All Locations
+                        </option>
+
+
+                        <option value="bangalore">
+                            Bangalore
+                        </option>
+
+
+                        <option value="hyderabad">
+                            Hyderabad
+                        </option>
+
+
+                        <option value="pune">
+                            Pune
+                        </option>
+
+
+                        <option value="mumbai">
+                            Mumbai
+                        </option>
+
+
+                        <option value="delhi">
+                            Delhi
+                        </option>
+
+
+                        <option value="remote">
+                            Remote
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+
+                <!-- EXPERIENCE -->
+
+                <div class="search-field">
+
+                    <label for="all-experience-filter">
+                        Experience
+                    </label>
+
+
+                    <select id="all-experience-filter">
+
+                        <option value="">
+                            All Experience
+                        </option>
+
+
+                        <option value="Fresher">
+                            Fresher
+                        </option>
+
+
+                        <option value="0-1">
+                            0–1 Year
+                        </option>
+
+
+                        <option value="1-3">
+                            1–3 Years
+                        </option>
+
+
+                        <option value="3-5">
+                            3–5 Years
+                        </option>
+
+
+                        <option value="5+">
+                            5+ Years
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+
+                <!-- WORK MODE -->
+
+                <div class="search-field">
+
+                    <label for="all-workmode-filter">
+                        Work Mode
+                    </label>
+
+
+                    <select id="all-workmode-filter">
+
+                        <option value="">
+                            All Work Modes
+                        </option>
+
+
+                        <option value="On-site">
+                            On-site
+                        </option>
+
+
+                        <option value="Hybrid">
+                            Hybrid
+                        </option>
+
+
+                        <option value="Remote">
+                            Remote
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+
+                <!-- CATEGORY -->
+
+                <div class="search-field">
+
+                    <label for="all-category-filter">
+                        Category
+                    </label>
+
+
+                    <select id="all-category-filter">
+
+                        <option value="">
+                            All Categories
+                        </option>
+
+
+                        <option value="software-development">
+                            Software Development
+                        </option>
+
+
+                        <option value="cybersecurity">
+                            Cybersecurity
+                        </option>
+
+
+                        <option value="data-analytics">
+                            Data & Analytics
+                        </option>
+
+
+                        <option value="cloud-devops">
+                            Cloud & DevOps
+                        </option>
+
+
+                        <option value="ai-ml">
+                            AI & Machine Learning
+                        </option>
+
+
+                        <option value="testing-qa">
+                            Testing & QA
+                        </option>
+
+
+                        <option value="fresher">
+                            Fresher Jobs
+                        </option>
+
+
+                        <option value="internships">
+                            Internships
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+
+                <!-- SEARCH BUTTON -->
+
+                <button
+                    id="all-search-button"
+                    class="search-jobs-button"
+                    type="button"
+                >
+                    Search Jobs
+                </button>
+
+
+            </div>
+
+
+
+            <!-- =================================
+                 ACTIVE FILTERS
+            ================================== -->
+
+            <div
+                id="active-filters"
+                class="active-filters"
+            >
+            </div>
+
+
+
+            <!-- =================================
+                 RESULTS HEADER
+            ================================== -->
+
+            <div class="jobs-results-header">
+
+
+                <div>
+
+                    <span class="section-label">
+                        JOB OPPORTUNITIES
+                    </span>
+
+
+                    <h2 id="results-title">
+                        Available Jobs
+                    </h2>
+
+                </div>
+
+
+                <span
+                    id="job-count"
+                    class="job-count"
+                >
+                    0 Jobs
+                </span>
+
+
+            </div>
+
+
+
+            <!-- =================================
+                 JOB LIST
+            ================================== -->
+
+            <div
+                class="job-list"
+                id="all-job-list"
+            >
+            </div>
+
+
+
+            <!-- =================================
+                 NO RESULTS
+            ================================== -->
+
+            <div
+                id="no-results"
+                class="no-results"
+                style="display: none;"
+            >
+
+                <div class="no-results-icon">
+                    🔎
+                </div>
+
+
+                <h3>
+                    No jobs found
+                </h3>
+
+
+                <p>
+                    We couldn't find any jobs matching your search.
+                    Try changing your filters or search keywords.
+                </p>
+
+
+                <button
+                    type="button"
+                    id="clear-filters-button"
+                    class="search-jobs-button"
+                >
+                    Clear Filters
+                </button>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================
+         TELEGRAM CTA
+    ====================================== -->
+
+    <section
+        class="telegram-section"
+        id="telegram"
+    >
+
+        <div class="container telegram-container">
+
+
+            <div>
+
+                <p class="section-label">
+                    NEVER MISS AN OPPORTUNITY
+                </p>
+
+
+                <h2>
+                    Get Daily IT Job Alerts on Telegram
+                </h2>
+
+
+                <p>
+                    New jobs, fresher openings, internships and
+                    off-campus drives delivered directly to your phone.
+                </p>
+
+            </div>
+
+
+            <!-- Replace # with your Telegram channel URL -->
+
+            <a
+                href="#"
+                class="telegram-button"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                ✈ Join Telegram Channel
+            </a>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================
+         FOOTER
+    ====================================== -->
+
+    <footer class="footer">
+
+        <div class="container footer-grid">
+
+
+            <!-- ABOUT -->
+
+            <div class="footer-about">
+
+                <a
+                    href="index.html"
+                    class="logo"
+                >
+                    <span>Tech</span>JobHub
+                </a>
+
+
+                <p>
+                    India-focused IT jobs, internships and
+                    career opportunities.
+                </p>
+
+            </div>
+
+
+
+            <!-- JOBS -->
+
+            <div class="footer-column">
+
+                <h4>
+                    Jobs
+                </h4>
+
+
+                <a href="jobs.html">
+                    Latest Jobs
+                </a>
+
+
+                <a href="jobs.html?category=fresher">
+                    Fresher Jobs
+                </a>
+
+
+                <a href="jobs.html?category=internships">
+                    Internships
+                </a>
+
+
+                <a href="jobs.html?location=remote">
+                    Remote Jobs
+                </a>
+
+            </div>
+
+
+
+            <!-- RESOURCES -->
+
+            <div class="footer-column">
+
+                <h4>
+                    Resources
+                </h4>
+
+
+                <a href="index.html#career">
+                    Resume Guides
+                </a>
+
+
+                <a href="index.html#career">
+                    Interview Prep
+                </a>
+
+
+                <a href="index.html#career">
+                    Career Guides
+                </a>
+
+            </div>
+
+
+
+            <!-- COMPANY -->
+
+            <div class="footer-column">
+
+                <h4>
+                    Company
+                </h4>
+
+
+                <a href="#">
+                    About Us
+                </a>
+
+
+                <a href="#">
+                    Contact
+                </a>
+
+
+                <a href="#">
+                    Privacy Policy
+                </a>
+
+
+                <a href="#">
+                    Disclaimer
+                </a>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- COPYRIGHT -->
+
+        <div class="container footer-bottom">
+
+            <p>
+                © 2026 TechJobHub. All rights reserved.
+            </p>
+
+        </div>
+
+
+    </footer>
+
+
+
+    <!-- =====================================
+         JAVASCRIPT
+    ====================================== -->
+
+   
+
+    <script src="script.js"></script>
+
+    <script src="api.js"></script>
+
+
+</body>
+
+</html>
