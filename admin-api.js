@@ -5,7 +5,7 @@
  * Frontend → FastAPI → PostgreSQL
  */
 
-const ADMIN_API_URL = "http://127.0.0.1:8000";
+const ADMIN_API_URL = "https://techjobhub-chon.onrender.com";
 
 const TOKEN_KEY = "techjobhub_admin_token";
 
