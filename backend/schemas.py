@@ -19,6 +19,8 @@ class JobBase(BaseModel):
     requirements: Optional[List[str]] = []
 
     apply_link: Optional[str] = None
+    source: Optional[str] = None
+    external_id: Optional[str] = None
 
 
 class JobCreate(JobBase):

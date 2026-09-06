@@ -24,3 +24,5 @@ class Job(Base):
     requirements = Column(JSON, nullable=True)
 
     apply_link = Column(String(1000), nullable=True)
+    source = Column(String(100), nullable=True)
+    external_id = Column(String(255), nullable=True)

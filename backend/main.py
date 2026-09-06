@@ -229,7 +229,9 @@ def create_job(
         responsibilities=job.responsibilities,
         requirements=job.requirements,
 
-        apply_link=job.apply_link
+        apply_link=job.apply_link,
+        source=job.source,
+        external_id=job.external_id
     )
 
     db.add(new_job)
@@ -287,6 +289,8 @@ def update_job(
     job.requirements = job_data.requirements
 
     job.apply_link = job_data.apply_link
+    job.source = job_data.source
+    job.external_id = job_data.external_id
 
     db.commit()
 
